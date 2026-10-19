@@ -1,6 +1,6 @@
 cask "typewright@beta" do
-  version "0.0.1-alpha.1"
-  sha256 "14f3641ee271a5504d6c67ab0e60302c550e34adb65de10abf42e354ca9f2a4b"
+  version "0.1.0-alpha.3"
+  sha256 "762f4eebe5471bc449bbdbf5647d2be41c776bc223194563e837fa5c05a8e2da"
 
   url "https://github.com/BierDav/typewright/releases/download/v#{version}/Typewright-#{version}.zip"
   name "Typewright"
