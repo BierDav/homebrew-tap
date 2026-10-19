@@ -75,9 +75,8 @@ cask "parallels-install" do
   # quarantine from the whole staged directory, not just the binary — an
   # untouched quarantine flag on the dylib makes dyld's Gatekeeper check hang
   # forever on first launch in a headless session (no GUI to show the prompt).
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{staged_path}"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}"]
   end
 
   caveats <<~EOS
